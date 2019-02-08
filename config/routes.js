@@ -20,7 +20,8 @@ module.exports.routes = {
 
   '/': { view: 'pages/homepage' },
   'GET /led/totalLed': 'LedsController.totalLed',
-  'POST /led/controlLed': 'LedsController.controlLed'
+  'POST /led/controlLed': 'LedsController.controlLed',
+  'POST /Usuario/login': 'UsuarioController.login'
 
   /***************************************************************************
    *                                                                          *
