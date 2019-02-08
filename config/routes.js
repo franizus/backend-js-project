@@ -21,7 +21,9 @@ module.exports.routes = {
   '/': { view: 'pages/homepage' },
   'GET /led/totalLed': 'LedsController.totalLed',
   'POST /led/controlLed': 'LedsController.controlLed',
-  'POST /Usuario/login': 'UsuarioController.login'
+  'POST /Usuario/login': 'UsuarioController.login',
+  'GET /Casa/buscarPorIdUsuario': 'CasaController.buscarPorIdUsuario',
+  'GET /Foco/buscarPorIdCasa': 'FocoController.buscarPorIdCasa'
 
   /***************************************************************************
    *                                                                          *

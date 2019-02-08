@@ -10,14 +10,14 @@ module.exports = {
     const parametros = req.allParams();
 
     var usuarioLogeado = await Usuario.find({
-      correo: parametros.correo
+      correo: parametros.correo,
+      password: parametros.password
     });
 
-    console.log(usuarioLogeado);
-
-    if (usuarioLogeado && parametros.password === usuarioLogeado.password) {
-      return res.ok(usuarioLogeado);
+    if (usuarioLogeado) {
+      return res.ok(usuarioLogeado[0]);
+    } else {
+      return res.badRequest({ mensaje: 'Error en inicio de sesion.' });
     }
-    return res.badRequest({ mensaje: 'Error en inicio de sesion.' });
   }
 };

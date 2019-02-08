@@ -15,8 +15,12 @@ module.exports = {
       type: 'boolean',
       required: true
     },
-    idLugar: {
-      model: 'Lugar'
+    nombreLugar: {
+      type: 'string',
+      required: true
+    },
+    idCasa: {
+      model: 'Casa'
     }
   }
 };

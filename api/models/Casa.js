@@ -11,11 +11,15 @@ module.exports = {
       type: 'string',
       required: true
     },
+    descripcion: {
+      type: 'string',
+      required: true
+    },
     idUsuario: {
       model: 'Usuario'
     },
-    lugares: {
-      collection: 'Lugar',
+    focos: {
+      collection: 'Foco',
       via: 'idCasa'
     }
   }

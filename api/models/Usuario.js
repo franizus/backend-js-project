@@ -17,7 +17,7 @@ module.exports = {
     },
     password: {
       type: 'string',
-      columnName: 'direccion_casa'
+      required: true
     },
     casas: {
       collection: 'Casa',

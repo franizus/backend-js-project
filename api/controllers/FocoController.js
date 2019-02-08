@@ -6,7 +6,13 @@
  */
 
 module.exports = {
-  
+  buscarPorIdCasa: async function(req, res) {
+    const parametros = req.allParams();
 
+    var focosCasas = await Foco.find({
+      idCasa: parametros.idCasa
+    });
+
+    return res.ok(focosCasas);
+  }
 };
-
